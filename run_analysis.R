@@ -1,12 +1,12 @@
 library(dplyr)
 
 #Download the data
-filename <- "Coursera_DS3_Final.zip"
+filename <- "getdata_projectfiles_UCI HAR Dataset.zip"
 
 # Checking if archieve already exists.
 if (!file.exists(filename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-  download.file(fileURL, filename, method="curl")
+  download.file(fileURL, filename)
 }  
 
 # Checking if folder exists
@@ -56,3 +56,4 @@ FinalData <- TidyData %>%
   group_by(subject, activity) %>%
   summarise_all(funs(mean))
 write.table(FinalData, "FinalData.txt", row.name=FALSE)
+
