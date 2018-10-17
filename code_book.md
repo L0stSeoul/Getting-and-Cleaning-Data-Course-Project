@@ -7,7 +7,7 @@ subject_train - subject_train.txt
 x_train - train/X_train.txt
 y_train -train/Y_train.txt
 
-Processing variables
+# Processing variables
 y_test_label - match y_test labels with corresponding activities
 tidy_test - binding test subject, test activity and test set
 y_train_label - match y_train labels with corresponding activities
